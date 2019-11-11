@@ -1,11 +1,16 @@
 {
   "name": "bootstrap-color",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Bootstrap color themes",
   "scripts": {
     "build": "gulp"
   },
   "license": "MIT",
+  "homepage": "https://github.com/bum/bootstrap-color.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bum/bootstrap-color.git"
+  },
   "dependencies": {
     "natives": "^1.1.6"
   },
