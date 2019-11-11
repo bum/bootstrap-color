@@ -1,0 +1,10 @@
+.lead {
+  font-size: 1.15em;
+}
+
+.btn-outline-light {
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: $light;
+  }
+}

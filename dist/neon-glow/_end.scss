@@ -1,0 +1,153 @@
+// Vibrant Sea
+$font-family-display: 'Hack', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif,
+  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+$button-shadow-colors: (
+  primary: #986edf,
+  secondary: #87c4f2,
+  success: #43cb8e,
+  info: #25a8eb,
+  warning: #f99511,
+  danger: #ff707f,
+  light: #9ea9b6,
+  dark: #191a2d,
+);
+
+@mixin btn-shadow($color) {
+  border-color: $color;
+  transition: none;
+
+  &,
+  &.focus,
+  &:focus {
+    box-shadow: 3px 3px 0 $color, 2px 2px 0 $color, 1px 1px 0 $color;
+  }
+
+  &:hover {
+    box-shadow: 5px 5px 0 $color, 4px 4px 0 $color, 3px 3px 0 $color, 2px 2px 0 $color, 1px 1px 0 $color;
+    transform: translate(-2px, -2px);
+    transition: all 0.3s ease;
+    //border: 1px solid yellow;
+  }
+
+  &:active {
+    box-shadow: none;
+    transform: translate(4px, 4px) !important;
+    transition: all 0.1s ease;
+  }
+}
+
+body {
+  background-image: url('../images/ng-background-dot.png');
+}
+
+.btn-shadow {
+  margin-left: 8px;
+
+  @each $color, $value in $button-shadow-colors {
+    &.btn-#{$color},
+    &.btn-outline-#{$color} {
+      @include btn-shadow($value);
+    }
+  }
+
+  @each $color, $value in $theme-colors {
+    &.btn-#{$color},
+    &.btn-outline-#{$color} {
+      &:hover {
+        background-color: $value;
+        //border-color: $value;
+      }
+    }
+  }
+}
+
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  font-family: $font-family-display;
+  //text-transform: uppercase;
+  //font-weight: 400;
+
+  .text-white &,
+  &.text-white {
+    text-shadow: -1px -1px rgba(255, 255, 255, 0.2);
+  }
+}
+
+.text-reduced-opacity {
+  opacity: 0.5;
+}
+
+.text-grey {
+  color: #a0a0a0;
+}
+
+.text-darkblue {
+  color: #4d4d74;
+}
+
+.text-darkgrey {
+  color: #6f6974;
+}
+
+.text-mono {
+  font-family: $font-family-display;
+}
+
+.btn-success {
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    color: #c1f8c2;
+  }
+}
+
+.vim-caret {
+  animation: vimCaret 1s linear infinite;
+}
+
+@keyframes vimCaret {
+  0% {
+    background-color: transparent;
+  }
+  49% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+// Regenerate list group items
+@each $color, $value in $theme-colors {
+  @include list-group-item-variant($color, theme-color-level($color, -2), theme-color-level($color, 6));
+}
+
+// Regenerate alerts
+@each $color, $value in $theme-colors {
+  .alert-#{$color} {
+    @include alert-variant(theme-color-level($color, -5), theme-color-level($color, -2), theme-color-level($color, 7));
+  }
+}
+
+// Regenerate table row variants
+@each $color, $value in $theme-colors {
+  @include table-row-variant($color, theme-color-level($color, -2));
+}
+
+// Evil robot
+.hal-9000 {
+  background: #f9d080;
+  border: 12px #ff3c5c solid;
+  border-radius: 90px;
+  box-shadow: 0 0 40px rgb(255, 60, 92);
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}

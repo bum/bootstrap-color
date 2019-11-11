@@ -1,0 +1,46 @@
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  font-family: 'Oswald', sans-serif;
+}
+
+.display-1 {
+  font-size: 142px;
+
+  @include media-breakpoint-down(md) {
+    font-size: 92px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    font-size: 70px;
+  }
+}
+
+.display-3 {
+  font-size: 66px;
+
+  @include media-breakpoint-down(xs) {
+    font-size: 40px;
+  }
+}
+
+.title-margin-fix {
+  margin-top: -33px;
+
+  @include media-breakpoint-down(md) {
+    margin-top: -13px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    margin-top: 0;
+  }
+}
+
+.text-handwriting {
+  font-family: 'Shadows Into Light', cursive;
+}
+
+::selection {
+  background: rgba(180, 63, 82, 0.56);
+}

@@ -1,0 +1,21 @@
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  font-family: 'Shrikhand', sans-serif;
+
+  &.text-danger {
+    text-shadow: 4px 4px #ff9d03; //todo
+  }
+
+  .text-danger & {
+    text-shadow: 4px 4px #ff9d03; //todo
+  }
+}
+
+.display-1 {
+  @include media-breakpoint-up(md) {
+    font-size: 115px;
+    line-height: 90px;
+  }
+}

@@ -1,0 +1,30 @@
+/*! Bootstrap 4 "Harbor" Theme by HackerThemes, https://hackerthemes.com */
+
+$primary: #3ea1e6;
+$secondary: #3ecae6;
+$success: #32c466;
+$info: #3e71e6;
+$warning: #ecb655;
+$danger: #e63e52;
+$dark: #303250;
+$light: #fff;
+
+$font-family-sans-serif: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default; //BS
+
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+@import '../../../scss/common-utils';
+
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  font-family: "Oswald", sans-serif;
+}
+
+.jumbotron-harbor {
+  align-items: center;
+  background: url('../images/bg-harbor.jpg');
+  background-position: center;
+  display: flex;
+  min-height: 674px;
+}

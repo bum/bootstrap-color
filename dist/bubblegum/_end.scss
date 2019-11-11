@@ -1,0 +1,23 @@
+.text-chicle {
+  font-family: 'Chicle', cursive;
+}
+
+.text-sans {
+  font-family: $font-family-sans-serif;
+}
+
+.lead {
+  font-size: 30px;
+
+  @include media-breakpoint-down(xs) {
+    font-size: 20px;
+  }
+}
+
+.display-1 {
+  font-size: 150px;
+
+  @include media-breakpoint-down(xs) {
+    font-size: 70px;
+  }
+}

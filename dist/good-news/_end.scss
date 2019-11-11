@@ -1,0 +1,20 @@
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  font-family: 'PT Serif', serif;
+}
+
+.lead {
+  font-size: 23px;
+}
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    border-color: theme-color-level($color, 1);
+  }
+
+  .alert-#{$color} {
+    border-color: theme-color-level($color, 2);
+  }
+}

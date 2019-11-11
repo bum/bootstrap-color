@@ -1,0 +1,127 @@
+/*! Bootstrap 4 "Vibrant Sea" Theme by HackerThemes, https://hackerthemes.com */
+
+// Bootstrap variables start
+$border-radius: 10px;
+$border-radius-lg: 10px;
+
+$body-color: #171717;
+$font-family-sans-serif: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; //BS
+
+$primary: #0f90ff;
+$secondary: #10c1f2;
+$success: #31e68e;
+$info: #1b5fc3;
+$warning: #ffc25b;
+$danger: #e5364d;
+$light: #dbebfb;
+$dark: #021127;
+
+$code-color: #1265ba;
+$code-bg: #bdd3f3;
+
+// Bootstrap variables end: Import Bootstrap
+
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+@import '../../../scss/common-utils';
+
+// Custom overrides
+
+// Vibrant Sea
+$font-family-display: 'Oswald', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+$button-shadow-colors: (
+  //TODO: colors
+  primary: #0871cb,
+  secondary: #5bcfef,
+  success: #1fa866,
+  info: #1250ab,
+  warning: #ce954e,
+  danger: #b73348,
+  light: #dbebfb,
+  dark: #021127
+);
+
+@mixin btn-shadow($color) {
+  transition: none;
+
+  &,
+  &.focus,
+  &:focus {
+    box-shadow: -4px -4px 0 $color,
+                -3px -3px 0 $color,
+                -2px -2px 0 $color,
+                -1px -1px 0 $color;
+  }
+
+  &:hover {
+    box-shadow: -7px -7px 0 $color,
+                -6px -6px 0 $color,
+                -5px -5px 0 $color,
+                -4px -4px 0 $color,
+                -3px -3px 0 $color,
+                -2px -2px 0 $color,
+                -1px -1px 0 $color;
+    transform: translate(3px, 3px);
+    transition: all .3s ease;
+  }
+
+  &:active {
+    box-shadow: none;
+    transform: translate(-4px, -4px) !important;
+    transition: all .1s ease;
+  }
+}
+
+.btn-shadow {
+  margin-left: 8px;
+
+  @each $color, $value in $button-shadow-colors {
+    &.btn-#{$color} {
+      @include btn-shadow($value);
+    }
+
+    &.btn-outline-#{$color} {
+      @include btn-shadow($value);
+    }
+  }
+
+  @each $color, $value in $theme-colors {
+    &.btn-#{$color} {
+      &:hover {
+        background-color: $value;
+        border-color: $value;
+      }
+    }
+
+    &.btn-outline-#{$color} {
+      //@include btn-shadow($value);
+
+      border-color: $value;
+      color: $value;
+
+      &:hover {
+        background-color: #fff;
+        color: $value;
+
+      }
+    }
+  }
+}
+
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  font-family: $font-family-display;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  .text-white &,
+  &.text-white {
+    text-shadow: -1px -1px rgba(255, 255, 255, .2);
+  }
+}
+
+.text-reduced-opacity {
+  opacity: .5;
+}

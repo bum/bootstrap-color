@@ -1,0 +1,39 @@
+.text-oswald {
+  font-family: 'Oswald', sans-serif;
+}
+
+.text-merriweather {
+  font-family: 'Merriweather', sans-serif;
+}
+
+.jumbo-vertical-center {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+.lead {
+  font-family: 'Merriweather', sans-serif;
+}
+
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  font-family: 'Merriweather', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.display-3 {
+  font-size: 69px;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 40px;
+  }
+}
+
+.text-spacey {
+  line-height: 26px;
+}

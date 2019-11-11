@@ -1,0 +1,31 @@
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  font-family: 'Comfortaa', cursive;
+}
+
+.display-icon {
+  display: inline-block;
+  font-size: 32px;
+  padding-top: 10px;
+  vertical-align: top;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 20px;
+  }
+}
+
+.btn-warning {
+  color: #d5dce6;
+}
+
+.bg-wizardry {
+  background: url('../images/bg-wizardry.jpg');
+}
+
+.display-1 {
+  @include media-breakpoint-down(sm) {
+    font-size: 3rem;
+  }
+}

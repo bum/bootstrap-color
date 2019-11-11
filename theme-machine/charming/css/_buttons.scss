@@ -1,0 +1,61 @@
+// Buttons
+.btn-xs {
+  //($padding-y, $padding-x, $font-size, $line-height, $border-radius)
+  @include button-size(.25rem, .5rem, .875rem, 16px, $border-radius);
+}
+
+.btn-md {
+  //($padding-y, $padding-x, $font-size, $line-height, $border-radius)
+  @include button-size(1rem, 2rem, 1rem, 16px, $border-radius);
+}
+
+.btn-lg {
+  //($padding-y, $padding-x, $font-size, $line-height, $border-radius)
+  @include button-size(1rem, 2rem, 1.25rem, 16px, $border-radius);
+}
+
+//.btn-secondary {
+//  &:hover,
+//  &:active,
+//  &:focus,
+//  & {
+//    //color: #fff;
+//  }
+//}
+
+//// Colored buttons
+//// Adds bevel to the buttons
+@each $name, $colors in $theme-colors {
+  .btn-#{$name} {
+    @include button-bevel();
+  }
+}
+
+ //Give white standard button a special bevel
+.btn-light {
+  @include bevel($dark: false);
+
+  &.btn-lg {
+    @include bevel($dark: false, $bottom-strength: -2px);
+  }
+}
+
+.btn-icon {
+  .icon {
+    line-height: 1px;
+    margin: 0;
+    vertical-align: middle;
+  }
+
+  .btn-icon-label {
+    margin-left: 5px;
+  }
+
+  &.btn-lg {
+    .btn-icon-label {
+      margin-left: 10px;
+    }
+  }
+}
+
+

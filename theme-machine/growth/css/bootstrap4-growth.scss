@@ -1,0 +1,41 @@
+/*! Bootstrap 4 "Growth" Theme by HackerThemes, https://hackerthemes.com */
+
+$primary: #5371fb;
+$secondary: #fb8f53;
+$success: #53fb70;
+$info: #53b1fb;
+$warning: #ecfb53;
+$danger: #fb536d;
+$dark: #373193;
+$light: #fff;
+
+$font-family-sans-serif: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default; //BS
+
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+@import '../../../scss/common-utils';
+
+.jumbotron-fullheight {
+  min-height: 100vh;
+  padding-top: 112px;
+}
+
+.bg-growth {
+  background: url('../images/bg-growth.svg');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  @media all and (-ms-high-contrast:none) {
+    background-image: none;
+  }
+}
+
+.btn-secondary {
+  color: #fff;
+}
+
+.display-1 {
+  @include media-breakpoint-down(sm) {
+    font-size: 4rem;
+  }
+}

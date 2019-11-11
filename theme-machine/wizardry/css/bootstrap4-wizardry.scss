@@ -1,0 +1,48 @@
+/*! Bootstrap 4 "Wizardry" Theme by HackerThemes, https://hackerthemes.com */
+
+$primary: #0085ff;
+$secondary: #99abc9;
+$success: #3ac84c;
+$info: #8568d2;
+$warning: #ff8e00;
+$danger: #f43535;
+$dark: #22232d;
+$light: #d6dce6;
+
+$font-family-sans-serif: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default; //BS
+
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+@import '../../../scss/common-utils';
+
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  font-family: "Comfortaa", cursive;
+}
+
+.display-icon {
+  display: inline-block;
+  font-size: 32px;
+  padding-top: 10px;
+  vertical-align: top;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 20px;
+  }
+}
+
+.btn-warning {
+  color: #d5dce6;
+}
+
+.bg-wizardry {
+  background: url('../images/bg-wizardry.jpg');
+}
+
+.display-1 {
+  @include media-breakpoint-down(sm) {
+    font-size: 3rem;
+  }
+}
+

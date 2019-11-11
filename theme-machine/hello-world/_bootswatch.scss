@@ -1,0 +1,23 @@
+.jumbotron-fullheight {
+  height: 100vh;
+}
+
+.jumbo-vertical-center {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  font-family: 'Fredoka One', cursive;
+  letter-spacing: 0.06em;
+}
+
+.lead,
+.lead-lg {
+  font-weight: 300;
+  letter-spacing: 0.06em;
+}

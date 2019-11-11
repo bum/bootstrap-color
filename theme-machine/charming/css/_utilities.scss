@@ -1,0 +1,26 @@
+.img-simple-border {
+  border: 1px $img-simple-border solid;
+}
+
+.icon-with-label {
+  align-items: center;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  margin-right: $spacer * 1.5;
+}
+
+.icon-with-label-text {
+  line-height: 20px;
+  margin-left: $spacer / 2.66;
+  margin-top: -2px;
+}
+
+.link-soft {
+  color: $body-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $body-color;
+  }
+}
