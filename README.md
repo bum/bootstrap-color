@@ -2,7 +2,7 @@
 
 ## Gallery of color theme for Bootstrap 4
 
-This project rebuilds color themes from HackerThemes and Bootswatch, etc. Each folder under `/dist/` is it's own 
+Each folder under `/dist/` is it's own 
 theme including:
 
 * `bs4-[theme].css` : built CSS
@@ -55,3 +55,11 @@ You can install as a package with the command
 or 
 
 `yarn add bootstrap-color`.
+
+## Copyright
+
+This project rebuilds color themes from 
+[HackerThemes](https://github.com/HackerThemes/theme-machine), 
+[Bootswatch](https://github.com/thomaspark/bootswatch), 
+[BootstrapThemes](https://github.com/utkarshkukreti/bootstrap-themes), 
+etc. Thanks for your sharings! <3
