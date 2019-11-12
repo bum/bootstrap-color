@@ -2,18 +2,21 @@
 
 ## Gallery of color theme for Bootstrap 4
 
-Each folder under `/dist/` is it's own 
-theme including:
+Each folder under `/dist/` is it's own theme including:
 
-* `bs4-[theme].css` : built CSS
-* `bs4-[theme].min.css` : built and minified css
-* `_begin.scss` : customize settings
-* `_end.scss` : modify structure
+- `bs4-[theme].css` : built CSS
+- `bs4-[theme].min.css` : built and minified css
+- `_begin.scss` : customize settings
+- `_end.scss` : modify structure
 
 ## Getting started
 
-You can use the built CSS files under `/dist/`, 
-or import SASS files `_begin.scss` `_end.scss` directly to your scripts to customize it. 
+You can use the built CSS files under `/dist/`,
+or import SASS files `_begin.scss` `_end.scss` directly to your scripts to customize it.
+
+We made a demo using bootstrap-color with Vue at 
+[bootstrap-color-demo-vue](https://github.com/bum/bootstrap-color-demo-vue.git)
+you can checkout and customize on it.
 
 ## Build steps
 
@@ -26,7 +29,7 @@ There are a few different ways you can integrate Bootswatch into your project.
 ### Via Pre-compiled Asset
 
 Download the `bs4-[theme].min.css` file associated with a theme and replace
-Bootstrap's default stylesheet.  You must still include Bootstrap's JavaScript
+Bootstrap's default stylesheet. You must still include Bootstrap's JavaScript
 file to have functional dropdowns, modals, etc.
 
 ### Via Sass Imports
@@ -48,18 +51,18 @@ Make sure to import Bootstrap's `bootstrap.scss` in between `_begin.scss` and `_
 
 ### Via NPM/YARN
 
-You can install as a package with the command 
+You can install as a package with the command
 
-`npm install bootstrap-color` 
+`npm install bootstrap-color bootstrap`
 
-or 
+or
 
-`yarn add bootstrap-color`.
+`yarn add bootstrap-color bootstrap`.
 
 ## Copyright
 
-This project rebuilds color themes from 
-[HackerThemes](https://github.com/HackerThemes/theme-machine), 
-[Bootswatch](https://github.com/thomaspark/bootswatch), 
-[BootstrapThemes](https://github.com/utkarshkukreti/bootstrap-themes), 
+This project rebuilds color themes from
+[HackerThemes](https://github.com/HackerThemes/theme-machine),
+[Bootswatch](https://github.com/thomaspark/bootswatch),
+[BootstrapThemes](https://github.com/utkarshkukreti/bootstrap-themes),
 etc. Thanks for your sharings! <3
