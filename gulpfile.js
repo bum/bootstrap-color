@@ -27,7 +27,7 @@ let themeRoots = [BOOTSWATCH, MACHINE, BS_THEMES]
 let buildPath = 'scss/build.scss'
 
 function getFolders(dir) {
-  return fs.readdirSync(dir).filter(function(file) {
+  return fs.readdirSync(dir).filter(function (file) {
     return fs.statSync(path.join(dir, file)).isDirectory()
   })
 }
@@ -48,7 +48,7 @@ function buildCss(cb) {
         fs.copyFileSync(`${BS_THEMES}/_after.scss`, `${DEST}/_after.scss`)
       }
 
-      folders.forEach(function(folder) {
+      folders.forEach(function (folder) {
         let themeFolder = themeRoot + '/' + folder
         gulp
           .src(buildPath)
@@ -56,7 +56,7 @@ function buildCss(cb) {
           .pipe(replace('themes/ThemeName', themeFolder))
           .pipe(sass().on('error', sass.logError))
           .pipe(postcss([autoprefixer({})]))
-          .pipe(rename({ dirname: folder, basename: 'bs4-' + folder }))
+          .pipe(rename({ dirname: folder, basename: 'bootstrap-color' }))
           .pipe(gulp.dest(DEST))
           .pipe(cleanCss())
           .pipe(rename({ suffix: '.min' }))
@@ -69,7 +69,7 @@ function buildCss(cb) {
             // check special theme of theme-machine having mixins
             if (themeRoot === MACHINE && checkCssDirToCopy(themeFolder + MACHINE_CSS)) {
               copydir.sync(themeFolder + MACHINE_CSS, DEST + folder + MACHINE_CSS, {
-                filter: function(stat, file, dir) {
+                filter: function (stat, file, dir) {
                   if (stat === 'file' && path.basename(file).startsWith(MACHINE_FILE_PREFIX)) {
                     return false
                   }
