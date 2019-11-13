@@ -4,8 +4,8 @@
 
 Each folder under `/dist/` is it's own theme including:
 
-- `bs4-[theme].css` : built CSS
-- `bs4-[theme].min.css` : built and minified css
+- `bootstrap-color.css` : built CSS
+- `bootstrap-color.min.css` : built and minified css
 - `_begin.scss` : customize settings
 - `_end.scss` : modify structure
 
@@ -28,7 +28,7 @@ There are a few different ways you can integrate Bootswatch into your project.
 
 ### Via Pre-compiled Asset
 
-Download the `bs4-[theme].min.css` file associated with a theme and replace
+Download the `bootstrap-color.min.css` file associated with a theme and replace
 Bootstrap's default stylesheet. You must still include Bootstrap's JavaScript
 file to have functional dropdowns, modals, etc.
 
