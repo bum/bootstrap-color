@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-color",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Collection of over 40 Bootstrap color themes https://bum.github.io/bootstrap-color/theme-switchable/",
   "scripts": {
     "build": "gulp"
