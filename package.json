@@ -1,12 +1,12 @@
 {
   "name": "bootstrap-color",
-  "version": "0.0.9",
-  "description": "Collection of over 40 Bootstrap color themes https://bum.github.io/bootstrap-color/theme-switchable/",
+  "version": "0.1.0",
+  "description": "Collection of over 40 Bootstrap color themes",
   "scripts": {
     "build": "gulp"
   },
   "license": "MIT",
-  "homepage": "https://github.com/bum/bootstrap-color.git",
+  "homepage": "https://bum.github.io/bootstrap-color/theme-switchable/",
   "repository": {
     "type": "git",
     "url": "https://github.com/bum/bootstrap-color.git"
